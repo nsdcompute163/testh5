@@ -1,1 +1,13 @@
-hello, world!
+<button onclick="vibrate()">Vibrate</button>
+
+<script>
+function vibrate() {
+  // Check if the Vibration API is supported by the browser
+  if ("vibrate" in navigator) {
+    // Vibrate for 200 milliseconds
+    navigator.vibrate(200);
+  } else {
+    console.log("Vibration API not supported");
+  }
+}
+</script>
